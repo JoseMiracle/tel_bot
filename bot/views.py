@@ -3,14 +3,15 @@ from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from telebot.types import Update
 from .bot import bot
+import os
+from dotenv import load_dotenv
+load_dotenv(override=True)
 
 import telebot
 
 
-# TOKEN = '7206021194:AAGgjLtgDvBfkN8f9FC3ja6ySKEVZKUklOY'
-# bot = telebot.TeleBot(TOKEN)
+WEBHOOK_URL = os.getenv('PROD_URL_FOR_WEBHOOK')+'/bot/webhook/'
 
-WEBHOOK_URL = 'https://dbcc-102-89-23-215.ngrok-free.app/bot/webhook/'
 
 bot.remove_webhook()
 bot.set_webhook(url=WEBHOOK_URL)
