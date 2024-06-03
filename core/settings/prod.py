@@ -7,5 +7,5 @@ load_dotenv(override=True)
 DEBUG=False
 SECRET_KEY = os.getenv('SECRET_KEY')
 
-ALLOWED_HOSTS = ['*.onrender.com']
+ALLOWED_HOSTS = ['*.onrender.com', 'tel-j9cb.onrender.com']
 
