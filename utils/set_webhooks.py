@@ -13,7 +13,7 @@ else:
     # WEBHOOK_URL = 'https://tel-z951.onrender.com/bot/webhook/'
 
 def set_webhook():
-    url = f"https://api.telegram.org/bot{API_TOKEN}/setWebhook"
+    # url = f"https://api.telegram.org/bot{API_TOKEN}/setWebhook"
     data = {'url': WEBHOOK_URL}
     response = requests.post(url, data=data)
     print(response.json())
