@@ -10,7 +10,7 @@ load_dotenv(override=True)
 import telebot
 
 
-WEBHOOK_URL = os.getenv('PROD_URL_FOR_WEBHOOK')+'/bot/webhook/'
+WEBHOOK_URL = 'https://tel-z951.onrender.com/bot/webhook'
 
 
 bot.remove_webhook()
